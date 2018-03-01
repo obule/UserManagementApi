@@ -1,0 +1,224 @@
+﻿@model BTS__User__Mangement__API.Models.AdminAppDetails
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="padding-top: 20px">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+
+
+            <div class="modal fade" tabindex="-1" id="successModal" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+
+                        </div>
+                        <div class="modal-body">
+                            <form id="form">
+                                <h2> Register User</h2>
+                                <div class="text-center">
+                                    <img id="myImg" src="https://static.pexels.com/photos/34950/pexels-photo.jpg" style="height:100px;" class="center-block" alt="User Management API">
+                                </div>
+
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label>Username/Email</label>
+                                        <input type="text" id="Email" name="Email" class="form-control" placeholder="Enter Username/Email" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" id="Password" name="Pasword" class="form-control" placeholder="Enter Password" />
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Surname</label>
+                                        <input type="text" id="Surname" name="Surname" class="form-control" placeholder="Enter Surname" />
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Othernames</label>
+                                        <input type="text" id="Othernames" name="Othernames" class="form-control" placeholder="Enter Othernames" />
+
+                                    </div>
+                                </div>
+
+
+                                <div class="modal-footer">
+                                    <input class="btn btn-success pull-right" type="button" id="btnRegister" value="Register" />
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="modal fade" tabindex="-1" id="RegistersuccessModal" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                            <h4>Success</h4>
+
+                        </div>
+                        <div class="modal-body">
+                            <h2>Registration Successful</h2>
+                            <p>Proceed to Email to Confim your Email. Thanks!!!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="ProceedToLogin2" class="btn btn-success">Proceed</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal fade" tabindex="-1" id="RegistersuccessModalWithoutConfirmation" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                            <h4>Success</h4>
+
+                        </div>
+                        <div class="modal-body">
+                            <h2>Registration Successful</h2>
+                            <p>Proceed To Login</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="ProceedToLogin" class="btn btn-success">Proceed</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+
+
+            <div id="divError" class="alert alert-danger collapse">
+                <a id="linkClose" class="close" href="#">&times;</a>
+                <div id="divErrorText"></div>
+            </div>
+        </div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var baseUrl = 'http://184.107.228.154/everylogin/api/';
+            $('#successModal').modal('show');
+
+            $('#linkClose').click(function () {
+                $('#divError').hide('fade');
+            });
+            function makeid() {
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                for (var i = 0; i < 10; i++)
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+                return text;
+            }
+
+           
+
+
+            @{
+                 <text>
+                var ApplicationId = '@Model.ApplicationId';
+                var Apikey = '@Model.ApiKey';
+                var CallBackUrl = '@Model.CallBackUrl';
+                var LogoUrl = '@Model.LogoUrl';
+
+
+            </text>
+            }
+
+                $('#myImg').attr('src', LogoUrl);
+                $('#btnRegister').click(function () {
+
+                        $.ajax({
+                            method: 'POST',
+                            url: baseUrl+'users',
+                            headers: {
+                                'Authorization': 'Basic ' + btoa(ApplicationId + ":" + Apikey)
+                            },
+                            data: $('#form').serialize(),
+                            success: function (data) {
+                               
+                                $.ajax({
+                                    method: 'POST',
+                                    url: baseUrl+'users/SaveTableToken?Token=' + makeid(),
+                                    headers: {
+                                        'Authorization': 'Basic ' + btoa(ApplicationId + ":" + Apikey)
+                                    },
+                                    success: function () {
+
+                                    },
+                                    error: function () {
+                                        alert("Error Updating Token Table");
+                                    }
+
+                                });
+
+                                    @{
+                                        if (Model.NeedEmailConfirmation == "Yes")
+                                        {
+                                            <text>
+                                                $('#RegistersuccessModal').modal('show');
+                                            </text>
+
+                                        }
+                                        else
+                                        {
+                                           <text>
+                                                $('#RegistersuccessModalWithoutConfirmation').modal('show');
+                                           </text>
+                                        }
+                                    }
+
+                            },
+                            error: function () {
+                                alert('Creation Failed');
+                            }
+                        });
+
+
+                        $('#ProceedToLogin').click(function () {
+                            window.location.href = CallBackUrl;
+                        });
+
+                        $('#ProceedToLogin2').click(function () {
+                            window.location.href = CallBackUrl;
+                        });
+
+
+
+            });
+        });
+    </script>
+</body>
+</html>
+

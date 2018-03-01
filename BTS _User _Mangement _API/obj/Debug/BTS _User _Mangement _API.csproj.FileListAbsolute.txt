@@ -1,0 +1,79 @@
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\ApplicationInsights.config
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\csc.exe
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\csc.exe.config
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\csc.rsp
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\csi.exe
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\csi.rsp
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\System.AppContext.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\System.Collections.Immutable.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\System.IO.FileSystem.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\vbc.exe
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\vbc.exe.config
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\vbc.rsp
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\VBCSCompiler.exe
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\roslyn\VBCSCompiler.exe.config
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\BTS _User _Mangement _API.dll.config
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\BTS _User _Mangement _API.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\BTS _User _Mangement _API.pdb
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Antlr3.Runtime.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.Web.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.WindowsServer.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.ApplicationInsights.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.Web.Infrastructure.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Newtonsoft.Json.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Net.Http.Formatting.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Helpers.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Http.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Http.WebHost.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Mvc.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Optimization.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Razor.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.WebPages.Deployment.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.WebPages.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.WebPages.Razor.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\WebGrease.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Newtonsoft.Json.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Net.Http.Formatting.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Helpers.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Http.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Http.WebHost.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Mvc.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Optimization.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Razor.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.WebPages.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.WebPages.Deployment.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.WebPages.Razor.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Antlr3.Runtime.pdb
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.ApplicationInsights.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.WindowsServer.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\Microsoft.AI.Web.xml
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\obj\Debug\BTS _User _Mangement _API.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\obj\Debug\BTS _User _Mangement _API.dll
+c:\users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\obj\Debug\BTS _User _Mangement _API.pdb
+C:\Users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Cors.dll
+C:\Users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Http.Cors.dll
+C:\Users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\System.Web.Http.Cors.xml
+C:\Users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\obj\Debug\BTS _User _Mangement _API.csproj.CoreCompileInputs.cache
+C:\Users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\RazorEngine.dll
+C:\Users\user\documents\visual studio 2017\Projects\BTS _User _Mangement _API\BTS _User _Mangement _API\bin\RazorEngine.xml

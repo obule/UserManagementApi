@@ -1,0 +1,131 @@
+﻿@model Users
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body style="padding-top: 20px">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="success">
+                        <th colspan="2">
+                            Existing User Login
+                            <a class="btn btn-success pull-right" href="Register.html">Register</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    Hello @Model.Name
+                    <tr>
+                        <td>Username</td>
+                        <td>
+                            <input type="text" id="txtUsername" placeholder="Username" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <input type="password" id="txtPassword" placeholder="Password" />
+                        </td>
+                    </tr>
+
+                    <tr class="success">
+
+                        <td colspan="2">
+                            <input class="btn btn-success" type="button" id="btnLogin" value="Login" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+           
+
+            <div id="divError" class="alert alert-danger collapse">
+                <a id="linkClose" class="close" href="#">&times;</a>
+                <div id="divErrorText"></div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/GoogleAuthentication.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //getAccessToken();
+            //$('#btnGoogleLogin').click(function () {
+            //    window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A64687%2FLogin.html&state=aVlxJ6_2ZoUWir9HZAg3B7a3MljKQibljKSb4p5D_FU1";
+            //});
+
+            //$('#btnFacebookLogin').click(function () {
+            //    window.location.href = "/api/Account/ExternalLogin?provider=Facebook&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A64687%2FLogin.html&state=aVlxJ6_2ZoUWir9HZAg3B7a3MljKQibljKSb4p5D_FU1";
+            //});
+            $('#linkClose').click(function () {
+                $('#divError').hide('fade');
+            });
+            $('#btnLogin').click(function () {
+                var Email = $('#txtUsername').val();
+                var Password = $('#txtPassword').val();
+                $.ajax({
+
+                    url: 'http://localhost:61768/api/BTS_Admin/VerifyUserLogin?Email=' + Email + '&Password=' + Password,
+                    method: 'POST',
+                    //dataType: 'json',
+                    //contentType: 'application/json',
+                    success: function (response) {
+                        $.ajax({
+                            method: 'POST',
+                            url: 'http://localhost:61768/api/users/CheckUserLogin?Email=' + Email + '&Password=' + Password,
+                            headers: {
+                                'Authorization': 'Basic ' + btoa(response.ApplicationId + ":" + response.ApiKey)
+                            },
+                            success: function (data) {
+                                alert(response.CallBackUrl);
+                                $.ajax({
+                                    method: 'POST',
+                                    //contentType: 'application/json',
+                                    url: 'Login.html',
+                                    data: {
+                                        Token: data.Token,
+                                    },
+                                    success: function () {
+                                        alert("Good");
+                                    },
+                                    error: function () {
+                                        alert("Evil");
+                                    }
+
+                                    
+                                });
+
+                                
+                                
+                            },
+                            error: function () {
+                                alert('Not Possible');
+                            }
+                        });
+                    },
+                    
+                    error: function (jqXHR) {
+                        if (jqXHR.status = '404') {
+                            $('#divErrorText').text('Login Mismatched');
+                            $('#divError').show('fade');
+
+                        }
+
+
+
+                    }
+
+                });
+
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+﻿@model BTS__User__Mangement__API.Models.AdminAppDetails
+    
+
+@{
+    ViewBag.Title = "Login";
+    
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="padding-top: 20px">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+            
+
+            <div class="modal fade" tabindex="-1" id="successModal" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                           
+                        </div>
+                        <div class="modal-body">
+                           <form>
+                               <h2> Existing User Login</h2>
+                               <div class="text-center">
+                                   <img id="myImg" src="https://static.pexels.com/photos/34950/pexels-photo.jpg" style="height:100px;" class="center-block" alt="User Management API">
+                               </div>
+                               
+                               <div class="modal-body">
+                                   <div class="form-group">
+                                       <label>Username/Email</label>
+                                       <input type="text" id="txtUsername" class="form-control" placeholder="Enter Username/Email" />
+                                   </div>
+                                   <div class="form-group">
+                                       <label>Password</label>
+                                       <input type="password" id="txtPassword" class="form-control" placeholder="Enter Password" />
+
+                                   </div>
+                               </div>
+                               
+                                   
+                               <div class="modal-footer">
+                                   <input class="btn btn-success pull-left" type="button" id="PasswordReset" value="Forgot Password" /><input class="btn btn-success pull-right" type="button" id="btnLogin" value="Login" />
+                               </div>
+                               
+                           </form>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal fade" tabindex="-1" id="RecoverModal" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <h2> Password Recovery</h2>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="text" id="Email" class="form-control" placeholder="Enter Your Email" />
+                                    </div>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <input class="btn btn-success pull-right" type="button" id="RecoverPass" value="Recover Password" />
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+            <div id="divError" class="alert alert-danger collapse">
+                <a id="linkClose" class="close" href="#">&times;</a>
+                <div id="divErrorText"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.fn.modal.Constructor.prototype.enforceFocus = function () { };
+            var baseUrl = 'http://184.107.228.154/everylogin/api/';
+            $('#successModal').modal('show');
+            
+
+            
+            //getAccessToken();
+            //$('#btnGoogleLogin').click(function () {
+            //    window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A64687%2FLogin.html&state=aVlxJ6_2ZoUWir9HZAg3B7a3MljKQibljKSb4p5D_FU1";
+            //});
+
+            //$('#btnFacebookLogin').click(function () {
+            //    window.location.href = "/api/Account/ExternalLogin?provider=Facebook&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A64687%2FLogin.html&state=aVlxJ6_2ZoUWir9HZAg3B7a3MljKQibljKSb4p5D_FU1";
+            //});
+            $('#linkClose').click(function () {
+                $('#divError').hide('fade');
+            });
+            function makeid() {
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                for (var i = 0; i < 10; i++)
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+                return text;
+            }
+
+            
+            @{
+                 <text>
+                var ApplicationId = '@Model.ApplicationId';
+                var Apikey = '@Model.ApiKey';
+                var CallBackUrl = '@Model.CallBackUrl';
+                var LogoUrl = '@Model.LogoUrl';
+
+              
+            </text>
+            }
+                $('#RecoverPass').click(function () {
+                    
+                    var Email = $('#Email').val();
+                    if (Email == '') {
+                        alert("Please Fill Your Email");
+                    } else {
+                        $.ajax({
+                            method: 'PUT',
+                            url: baseUrl+'users/Updatepassword?Email=' + Email,
+                            headers: {
+                                'Authorization': 'Basic ' + btoa(ApplicationId + ":" + Apikey)
+                            },
+                            success: function () {
+                                alert('Updated !! Go to Your Email to get new Password');
+                            },
+                            error: function () {
+                                alert("Failed to Update");
+                            }
+                        });
+
+                    }
+                });
+                $('#myImg').attr('src', LogoUrl);
+            $('#btnLogin').click(function () {
+                var Email = $('#txtUsername').val();
+                var Password = $('#txtPassword').val();
+                        $.ajax({
+                            method: 'POST',
+                            url: baseUrl+'users/CheckUserLogin?Email=' + Email + '&Password=' + Password,
+                            headers: {
+                                'Authorization': 'Basic ' + btoa(ApplicationId + ":" + Apikey)
+                            },
+                            success: function (data) {
+                                alert("Login Confirmed");
+                                $.ajax({
+                                    method: 'POST',
+                                    url: baseUrl+'users/SaveTableToken?Token=' + makeid(),
+                                    headers: {
+                                        'Authorization': 'Basic ' + btoa(ApplicationId + ":" + Apikey)
+                                    },
+                                    success: function () {
+                                        $.post(CallBackUrl, { Token: data.Token });
+                                    },
+                                    error: function () {
+                                        alert("Error Updating Token Table");
+                                    }
+
+                                });
+                            
+                            },
+                            error: function () {
+                                alert('Login Failed');
+                            }
+                        });
+           
+                });
+
+            $('#PasswordReset').click(function () {
+                $('#RecoverModal').modal('show');
+            });
+        });
+    </script>
+</body>
+</html>
+
